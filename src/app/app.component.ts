@@ -10,5 +10,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'probarboot';
+  celdas = [["PRIMER", "SEGUND"], ["TERCER", "CUART"]]
+  mostrarOcultar (celda:string){
+    let parrafo = document.getElementById(celda)
+    let visible = parrafo!!.style.display
+    if (visible == 'none'){
+      parrafo!!.style.display = 'block'
+    }else{
+      parrafo!!.style.display = 'none'
+    }
+  }
 }
